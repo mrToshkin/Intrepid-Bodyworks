@@ -1,0 +1,53 @@
+@mixin header-background($file-name, $height-desktope, $height-tablet, $height-mobile) {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: $height-desktope;
+    z-index: -3;
+    background: url(../img/general/#{$file-name}--desktope.jpg) center center no-repeat;
+    background: url(../img/general/#{$file-name}--desktope.webp) center center no-repeat;
+    background-size: cover;
+    @media 
+    (min-resolution: $retina-dpi), 
+    (min-resolution: $retina-dppx) {
+      background: url(../img/general/#{$file-name}--desktope@2x.jpg) center center no-repeat;
+      background: url(../img/general/#{$file-name}--desktope@2x.webp) center center no-repeat;
+      background-size: cover;
+    }
+    @media (max-width: $tablet) {
+      height: $height-tablet;
+      background: url(../img/general/#{$file-name}--desktope.jpg) center center no-repeat;
+      background: url(../img/general/#{$file-name}--desktope.webp) center center no-repeat;
+      background-size: cover;
+    }
+    @media 
+    (max-width: $tablet) and (min-resolution: $retina-dpi), 
+    (max-width: $tablet) and (min-resolution: $retina-dppx) {
+      height: $height-tablet;
+      background: url(../img/general/#{$file-name}--desktope@2x.jpg) center center no-repeat;
+      background: url(../img/general/#{$file-name}--desktope@2x.webp) center center no-repeat;
+      background-size: cover;
+    }
+    @media (max-width: $mobile) {
+      height: $height-mobile;
+      background: url(../img/general/#{$file-name}--mobile.jpg) center center no-repeat;
+      background: url(../img/general/#{$file-name}--mobile.webp) center center no-repeat;
+      background-size: cover;
+    }
+    @media 
+    (max-width: $mobile) and (min-resolution: $retina-dpi), 
+    (max-width: $mobile) and (min-resolution: $retina-dppx) {
+      height: $height-mobile;
+      background: url(../img/general/#{$file-name}--desktope.jpg) center center no-repeat;
+      background: url(../img/general/#{$file-name}--desktope.webp) center center no-repeat;
+      background-size: cover;
+    }
+  }
+}
+.main-page__header-background { 
+  @include header-background("main-page", 630px, 550px, 440px);
+}

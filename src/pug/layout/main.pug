@@ -1,0 +1,53 @@
+include ../utility/mixins
+block variables
+
+- var desktope  = 1024
+- var tablet = 768
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title #{title}
+    <!--[if IE]>
+    meta(http-equiv='X-UA-Compatible', content="IE = edge")
+    <![endif]-->
+    meta(name="format-detection" content="telephone=no")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="keywords" content="Massage Therapy, Denver, Thornton, Northglenn, Westminster")
+    meta(name="description" content="Intrepid Bodyworks offers high-quality massage therapy services for chronic pain relief,injury rehabilitation, athletic performance, and more in Thornton, CO. Our services extend to Northglenn, Westminster, and other areas north of Denver. Book an appointment by calling us at 720-388-0439 or contact us via our website.")
+    link(rel="canonical" href="https://intrepidbodyworks.com/")
+
+    meta(property="og:url" content="https://intrepidbodyworks.com/")
+    meta(property="og:type" content="website")
+    meta(property="og:title" content="Professional Massage Therapy Services for Pain Relief in Thornton, CO")
+    meta(property="og:description" content="Intrepid Bodyworks offers high-quality massage therapy services for chronic pain relief,injury rehabilitation, athletic performance, and more in Thornton, CO. Our services extend to Northglenn, Westminster, and other areas north of Denver. Book an appointment by calling us at 720-388-0439 or contact us via our website.")
+    meta(name="twitter:description" content="Intrepid Bodyworks offers high-quality massage therapy services for chronic pain relief,injury rehabilitation, athletic performance, and more in Thornton, CO. Our services extend to Northglenn, Wes...")
+    meta(name="twitter:card" content="summary")
+    meta(name="twitter:title" content="Professional Massage Therapy Services for Pain Relief in Thornton, CO")
+
+    link(rel="preload" href="fonts/IBMPlexSans-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous")
+    link(rel="preload" href="fonts/IBMPlexSans-BoldItalic.woff2" as="font" type="font/woff2" crossorigin="anonymous")
+    link(rel="preload" href="fonts/IBMPlexSans-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous")
+    link(rel="preload" href="fonts/IBMPlexSans-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous")
+    link(rel="preload" href="fonts/IBMPlexSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous")
+    
+    link(rel="icon" href="img/general/favicons/favicon32.png" sizes="16x16 32x32" type="image/png")
+    link(rel="apple-touch-icon" href="img/general/favicons/favicon256.png" sizes="180x180")
+
+    link(rel="stylesheet" type='text/css' href="css/styles.min.css")
+
+    script document.createElement( "picture" );
+    script(src="js/fills-min/picturefill.js" async)
+    script(src="js/fills-min/polyfill.js" async)
+    script(src="js/libs.min.js" defer)
+    script(src="js/script.min.js" defer)
+    script $(document).ready(function(){svg4everybody(rawopts{});});
+  body
+    div(class=""+PageHeaderBackground)
+      .bg-mobile-menu
+      block header
+      block content
+      include ../../components/2.footer/footer
+    block script
+    noscript Your browser does not support JavaScript

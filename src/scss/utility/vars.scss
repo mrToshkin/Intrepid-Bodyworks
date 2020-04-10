@@ -1,0 +1,45 @@
+// Colors
+$black: #000000;
+$white: #ffffff;
+$a: #4C2463;
+$b: #4F1790;
+$color-main: #7400A3;
+$d: #3C1732;
+$e: #240A25;
+$f: #F6674D;
+$g: #222222;
+$h: #240A25;
+$i: #888888;
+/* $bgc-page: #050713;
+$bgc-mobile-menu: rgba(1, 23, 45, 0.95);
+$bgc-nav-sticky: rgba(27, 49, 75, 0.9);
+$bgc-element: rgba(27, 49, 75, 0.75);
+$bgc-element-button: #2D3A52;
+$bgc-link: #0E1420;
+$bgc-link-hover: #E7CC89;
+$color-warning: #FF4242;
+ */
+
+// Sizes
+$base-font-size: 18px;
+
+// Breakpoints desktope first
+$mobile: 768px;
+$tablet: 1024px;
+$desktope: 1400px;
+
+$tablet-1: 767px;
+$desktope-1: 1023px;
+
+// DPI
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+// Fonts
+$font: "IBM Plex Sans", "Arial", "Helvetica", sans-serif;
+
+@mixin font { font-family: $font; font-weight: normal; font-style: normal; }
+@mixin font-medium { font-family: $font; font-weight: 500; font-style: normal; }
+@mixin font-semibold { font-family: $font; font-weight: 600; font-style: normal; }
+@mixin font-bold { font-family: $font; font-weight: bold; font-style: normal; }
+@mixin font-bolditalic { font-family: $font; font-weight: bold; font-style: italic; }
