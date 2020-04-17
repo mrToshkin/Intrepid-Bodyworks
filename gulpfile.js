@@ -31,11 +31,11 @@ gulp.task('scss', () => {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass())
-    .pipe(autoprefixer({
+    /* .pipe(autoprefixer({
       overrideBrowserslist:  ['last 3 versions'],
       cascade: false
     }))
-    .pipe(csscomb())
+    .pipe(csscomb()) */
     .pipe(gulp.dest('./build/css'))
     .pipe(browserSync.reload({ stream: true }))
     .pipe(replace('/*! normalize.css', '/* normalize.css'))
@@ -121,11 +121,11 @@ gulp.task('webp', () => {
 gulp.task('svg', () => {
   return gulp.src('./src/img/svg/*.svg')
     .pipe(svgmin({js2svg:{pretty: true}}))
-    .pipe(cheerio({ run: function ($) {
+    /* .pipe(cheerio({ run: function ($) {
         $('[fill]').removeAttr('fill');
         $('[stroke]').removeAttr('stroke');
         $('[style]').removeAttr('style');
-      },parserOptions: {xmlMode: true}}))
+      },parserOptions: {xmlMode: true}})) */
     .pipe(replace('&gt;', '>'))
     .pipe(gulp.dest('./build/img/svg'));
 });

@@ -1,12 +1,20 @@
 // Colors
 $black: #000000;
 $white: #ffffff;
-$a: #4C2463;
-$b: #4F1790;
 $color-main: #7400A3;
+$a: #4C2463;
+$bgc-header: #4F1790;
+$bgc-mobile-menu: #37076F;
 $d: #3C1732;
 $e: #240A25;
-$f: #F6674D;
+$bgc-btn1: #F6674D;
+$bgc-btn1-hover: #f77e68;
+$bgc-btn1-click: #c5523e;
+$bgc-btn2: #4F1790;
+$bgc-btn2-hover: #693aa1;
+$bgc-btn2-click: #3f1273;
+$bgc-bottom-right: #4299FF;
+$bgc-bottom-right-hover: rgb(69, 66, 255);
 $g: #222222;
 $h: #240A25;
 $i: #888888;
@@ -20,22 +28,19 @@ $bgc-link-hover: #E7CC89;
 $color-warning: #FF4242;
  */
 
-// Sizes
-$base-font-size: 18px;
-
 // Breakpoints desktope first
 $mobile: 768px;
 $tablet: 1024px;
-$desktope: 1400px;
-
-$tablet-1: 767px;
-$desktope-1: 1023px;
+$desktope: 1200px;
+$wide: 1400px;
 
 // DPI
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
 // Fonts
+$base-font-size: 16px;
+@function rem($size) { @return $size / $base-font-size * 1rem; }
 $font: "IBM Plex Sans", "Arial", "Helvetica", sans-serif;
 
 @mixin font { font-family: $font; font-weight: normal; font-style: normal; }
@@ -43,3 +48,7 @@ $font: "IBM Plex Sans", "Arial", "Helvetica", sans-serif;
 @mixin font-semibold { font-family: $font; font-weight: 600; font-style: normal; }
 @mixin font-bold { font-family: $font; font-weight: bold; font-style: normal; }
 @mixin font-bolditalic { font-family: $font; font-weight: bold; font-style: italic; }
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: rem($size);
+}

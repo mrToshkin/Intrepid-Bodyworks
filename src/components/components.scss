@@ -1,6 +1,9 @@
 @import "1.header/header";
 @import "1.header/header-backgrounds";
+@import "3.nav/__burger";
 @import "3.nav/nav";
-@import "4.sliders/sliders-common";
+@import "4.menu/mobile-menu";
+@import "mobile-bottom-blocks";
+@import "5.sliders/sliders-common";
 
 @import "2.footer/footer";

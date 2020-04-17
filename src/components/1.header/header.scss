@@ -1,7 +1,97 @@
 .header {
-  min-height: 470px;
+  position: relative;
+  overflow: hidden;
 
-  &__nav{
-    min-height: 131px;
+  display: flex;
+  flex-direction: column;
+  min-height: 800px;
+
+  color: $white;
+
+  background-color: $bgc-header;
+
+  .wrap {position: relative;}
+
+  @media (max-width: $tablet) { 
+    min-height: 400px;
+  }
+  
+  &__nav {
+    z-index: 2;
+    margin-top: 32px;
+    @media (max-width: $tablet) { 
+      margin-top: 0;
+    }
+  }
+  &__body {
+    z-index: 1;
+    margin-top: 151px;
+    margin-bottom: 230px;
+    @media (max-width: $tablet) {
+      margin-top: 77px;
+      margin-bottom: 96px;
+    }
+  }
+  &__article {
+    &--main-page { 
+      margin-top: 30px;
+      @media (max-width: $tablet) {
+        margin-top: 0;
+      }
+    }
+    &-p {
+      margin-top: 27px;
+      @media (max-width: $tablet) {
+        margin-top: 19px;
+      }
+    }
+  }
+  // main page
+  &__line-element {
+    width: 40px;
+    height: 4px;
+
+    background-color: $white;
+    @media (max-width: $tablet) { display: none; }
+  }
+  &__button { 
+    margin-top: 37px;
+    @media (max-width: $tablet) {
+      margin-top: 24px;
+    }
+  }
+  &__anchor {
+    position: relative;
+    @media (max-width: $tablet) { display: none; }
+  }
+}
+
+.arrow-anchor {
+  position: absolute;
+  top: 140px;
+  left: 15px;
+  margin-left: -20px;
+  width: 40px;
+  height: 50px;
+  z-index: 1;
+  animation-name: show-down-arrow,jump-down-arrow;
+  animation-duration: .5s,1s;
+  animation-delay: 1.2s,1.3s;
+  animation-timing-function: ease-in,ease-out;
+  animation-direction: normal,alternate;
+  animation-fill-mode: both,both;
+  animation-iteration-count: 1,infinite;
+
+  @keyframes show-down-arrow {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes jump-down-arrow {
+    0% { transform: translateY(-50px); }
+    100% { transform: translateY(-30px); }
+  }
+  .icon-arrow {
+    stroke: $white;
+    transform: rotateZ(90deg) translateX(10px);
   }
 }
