@@ -1,3 +1,14 @@
 .footer {
-  min-height: 300px;
+  &__body {
+    background-color: $bgc-footer1;
+  }
+  &__nav {
+    z-index: 1;
+  }
+  &__copyrights {
+    background-color: $bgc-footer2;
+  }
+  @media (max-width: $mobile) {
+    padding-bottom: 48px;
+  }
 }

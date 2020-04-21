@@ -2,13 +2,13 @@ $(document).ready(function() {
   var $body = document.querySelector('body'),
       burger = document.querySelector('.burger'),
       overlay = document.querySelector('.mobile-menu__overlay'),
-      widthMobile = window.matchMedia('(max-width: 1024px)'); // media query list
+      widthTablet = window.matchMedia('(max-width: 1024px)'); // media query list
 
   $('body').removeClass('nojs')
 
   // чтобы присваивал класс только если мобильное разрешение
   function pageStarted() {
-    if (widthMobile.matches) {
+    if (widthTablet.matches) {
       $('body').addClass('menu--closed');
     }
   };
@@ -16,8 +16,7 @@ $(document).ready(function() {
   function checkWidth(e) {
     if (e.matches) {
       $('body').addClass('menu--closed');
-    }
-    else {
+    } else {
       $('body').removeClass('menu--closed'),
       $('body').removeClass('menu--opened');
       $('.mobile-menu__overlay').removeClass('mobile-menu__overlay--opened');
@@ -25,7 +24,7 @@ $(document).ready(function() {
   };
 
   // следит за изменением размера окна
-  widthMobile.addListener(checkWidth);
+  widthTablet.addListener(checkWidth);
   pageStarted();
 
   $('.burger').on('click', function(e) {

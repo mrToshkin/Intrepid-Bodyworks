@@ -80,17 +80,12 @@ input[type="file"].visually-hidden {
 }
 
 //------------------RPOJECT-------------------//
-body {
-  position: relative;
-  @include font-size(18px);
-  @media (max-width: $mobile) {
-    @include font-size(15px);
-  }
-}
+body { position: relative; }
 button, input, summary, textarea {
   outline-color: $color-main;
 }
 a { outline-color: $bgc-btn1; }
+.hidden { display: none; }
 
 @import "fonts";
 @import "containers";

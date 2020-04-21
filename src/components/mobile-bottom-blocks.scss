@@ -10,7 +10,7 @@
     width: 100%;
     
     .left-case {
-      flex-grow: 1;
+      flex: 1;
 
       display: flex;
       justify-content: space-around;
@@ -22,7 +22,7 @@
       &:hover, &:focus { color: $bgc-btn1-hover; background-color: $bgc-btn2; }
     }
     .right-case {
-      flex-grow: 1;
+      flex: 1;
 
       display: flex;
       justify-content: space-around;
