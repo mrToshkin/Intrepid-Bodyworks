@@ -23,11 +23,6 @@
   padding: 8px 24px;
   border-radius: 20px;
 
-  @include font-bold;
-  word-wrap: none;
-  white-space: nowrap;
-  color: $white;
-  
   background-color: $bgc-btn1;
   cursor: pointer;
   &:hover, &:focus { background-color: $bgc-btn1-hover; }
@@ -35,5 +30,8 @@
   &--i-want-to-relieve { padding: 8px 32px; }
   @media (max-width: $tablet) {
     padding: 8px 20px;
+  }
+  @media (max-width: $mobile) {
+    padding: 8px 10px;
   }
 }

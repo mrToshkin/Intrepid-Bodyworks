@@ -36,6 +36,19 @@ h2 {
   }
 }
 
+h3 {
+  @include font-semibold;
+  @include font-size(48px);
+  line-height: 62px;
+  @media (max-width: $tablet) {
+    @include font-size(38px);
+  }
+  @media (max-width: $mobile) {
+    @include font-size(24px);
+    line-height: 31px;
+  }
+}
+
 h4 {
   @include font-bold;
   @include font-size(24px);
@@ -83,6 +96,15 @@ p, h5, h6 {
     word-wrap: none;
     white-space: nowrap;
     color: $white;
+  }
+}
+.button {
+  @include font-bold;
+  word-wrap: none;
+  white-space: nowrap;
+  color: $white;
+  @media (max-width: $tablet) {
+    @include font-size(15px);
   }
 }
 .link {
