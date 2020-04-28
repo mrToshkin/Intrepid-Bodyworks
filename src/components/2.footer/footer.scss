@@ -8,7 +8,10 @@
   &__copyrights {
     background-color: $bgc-footer2;
   }
+  @media (max-width: $tablet) {
+    padding-bottom: 55px;
+  }
   @media (max-width: $mobile) {
-    padding-bottom: 48px;
+    padding-bottom: 44px;
   }
 }

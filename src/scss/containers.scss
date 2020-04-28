@@ -1,6 +1,4 @@
 .container--wide {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   max-width: $wide;
   margin: 0 auto;
@@ -21,8 +19,6 @@
 }
 
 .container--middle {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   max-width: $wide;
   margin: 0 auto;
@@ -43,8 +39,6 @@
 }
 
 .container--narrow {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   max-width: $wide;
   margin: 0 auto;

@@ -82,3 +82,9 @@
   .nav__logo { z-index: 4; }
 }
 //------------------------end--------------------------//
+
+.nojs {
+  .mobile-menu {
+    display: none;
+  }
+}

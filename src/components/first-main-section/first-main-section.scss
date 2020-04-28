@@ -1,12 +1,14 @@
 .first-main-section {
-  @include grid;
-  padding-top: 60px;
-  padding-bottom: 63px;
-
-  @media (max-width: $mobile) {
-    display: block;
-    padding-top: 30px;
-    padding-bottom: 30px;
+  &__grid {
+    @include grid;
+    padding-top: 60px;
+    padding-bottom: 63px;
+  
+    @media (max-width: $mobile) {
+      display: block;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
   }
 
   &__aside { 
