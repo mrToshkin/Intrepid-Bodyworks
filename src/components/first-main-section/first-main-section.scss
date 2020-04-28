@@ -1,6 +1,5 @@
 .first-main-section {
-  &__grid {
-    @include grid;
+  &__block {
     padding-top: 60px;
     padding-bottom: 63px;
   

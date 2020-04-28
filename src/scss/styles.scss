@@ -86,6 +86,7 @@ button, input, summary, textarea {
 }
 a { outline-color: $bgc-btn1; }
 .hidden { display: none; }
+.grid { @include grid; }
 
 @import "fonts";
 @import "containers";

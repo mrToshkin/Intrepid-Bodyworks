@@ -28,6 +28,9 @@
   &:hover, &:focus { background-color: $bgc-btn1-hover; }
   &--contact-us { padding: 8px 24px; }
   &--i-want-to-relieve { padding: 8px 32px; }
+  &--learn-more { background-color: $bgc-btn2;
+    &:hover, &:focus { background-color: $bgc-btn2-hover; }
+  }
   @media (max-width: $tablet) {
     padding: 8px 20px;
   }

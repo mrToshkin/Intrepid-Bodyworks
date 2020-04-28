@@ -32,15 +32,21 @@
     position: relative;
     z-index: 0;
 
+    grid-column: 2/12;
     width: 100%;
     padding: 80px 100px;
 
     color: $white;
 
-    background-color: $color-main;
-
+    background: url(../img/svg/free-consultation.svg) no-repeat 100% 100% $color-main ;
+    
+    @media (max-width: $tablet) {
+      grid-column: 1/13;
+    }
+    
     @media (max-width: $mobile) {
       padding: 30px 20px;
+      background-size: auto 90%;
     }
   }
   &__line-element {
