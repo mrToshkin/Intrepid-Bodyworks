@@ -93,17 +93,21 @@
     }
     @media (max-width: $mobile) {
       margin-top: 20px;
+      padding-right: 42px;
     }
     
     &::after {
       content: '';
       position: absolute;
       right: 0;
-      top: 3px;
+      top: 2px;
       
       width: 40px;
       height: 29px;
       background: url(../img/svg/sprite-exported.svg) -40px -50px;
+      @media (max-width: $mobile) {
+        transform: scale(0.6);
+      }
     }
   }
 

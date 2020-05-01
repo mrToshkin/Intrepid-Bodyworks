@@ -58,10 +58,12 @@ h4 {
     line-height: 19px;
   }
 }
-h1, h2, h3, h4 { 
-  font-family: $font;
+h5 {
+  @include font-semibold;
+  @include font-size(20px);
+  line-height: 29px;
 }
-p, h5, h6 { 
+p, h6 { 
   font-family: $font;
 }
 .header__article-p {
