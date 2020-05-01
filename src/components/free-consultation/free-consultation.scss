@@ -14,20 +14,6 @@
     background: url(../img/general/tx_what-we-do.webp);
     background-repeat: repeat;
   }
-  &__background {
-    background-color: $color-main;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    overflow: hidden;
-
-    img {
-      @media (max-width: $mobile) {
-        max-height: 220px;
-      }
-    }
-  }
   &__block {
     position: relative;
     z-index: 0;
