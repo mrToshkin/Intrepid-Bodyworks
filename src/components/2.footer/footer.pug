@@ -1,7 +1,38 @@
 footer.footer
   .footer__body
     .container--wide
-      nav.nav.footer__nav
-        include ../4.menu/menu
-  .footer__copyrights
-    .container--wide
+      .footer__line-nav
+        nav.nav.footer__nav
+          include ../4.menu/menu
+        .footer__social
+          a(href="#").footer__social-link
+            svg(class="footer__social-icon" width="30px" height="30px" viewBox="0 0 30 30")
+              use(href="img/svg/sprite-social.svg#social__yelp")
+          a(href="#").footer__social-link
+            svg(class="footer__social-icon" width="30px" height="30px" viewBox="0 0 30 30")
+              use(href="img/svg/sprite-social.svg#social__gplus")
+          a(href="#").footer__social-link
+            svg(class="footer__social-icon" width="30px" height="30px" viewBox="0 0 30 30")
+              use(href="img/svg/sprite-social.svg#social__fb")
+      .footer__line-info.grid
+        .footer__address
+          p Intrepid Bodyworks, 10313 Washington St. Thornton, CO 80229
+          p Monday — Sunday 9am — 8pm (Closed Tuesdays)
+        .footer__contacts
+          p
+            a(href="tel:3034572040") 303-457-2040
+          p
+            a(href="mailto:intrepidBodyworks@gmail.com") IntrepidBodyworks@gmail.com
+  .footer__bottom
+    .container--wide.flex
+      .footer__site
+        p Intrepid Bodyworks © 2018
+        span.company-rating__text Company rating:
+          a(href="#").company-rating__stars
+            +icon-class('star', 'star-5', '16', '16')
+            +icon-class('star', 'star-4', '16', '16')
+            +icon-class('star', 'star-3 icon-star--golden', '16', '16')
+            +icon-class('star', 'star-2 icon-star--golden', '16', '16')
+            +icon-class('star', 'star-1 icon-star--golden', '16', '16')
+      .footer__developer
+        p Developed by Anton Strizhov

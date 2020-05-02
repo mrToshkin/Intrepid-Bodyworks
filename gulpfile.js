@@ -142,6 +142,14 @@ gulp.task('sprite', () => {
     .pipe(rename('sprite.svg'))
     .pipe(gulp.dest('./build/img/svg'));
 });
+gulp.task('sprite:social', () => {
+  return gulp.src('./src/img/svg/social-icons/**/*.svg')
+    .pipe(svgmin({js2svg:{pretty: true}}))
+    .pipe(replace('&gt;', '>'))
+    .pipe(svgstore({inLineSvg: true}))
+    .pipe(rename('sprite-social.svg'))
+    .pipe(gulp.dest('./build/img/svg'));
+});
 
 gulp.task('fonts', () => {
   return gulp.src('./src/fonts/**')
@@ -173,7 +181,7 @@ gulp.task('watch', () => {
   gulp.watch('./src/fonts/**', gulp.series('fonts'));
 });
 
-gulp.task('optimg', gulp.series('clean:img', 'img', 'webp', 'svg', 'sprite'));
+gulp.task('optimg', gulp.series('clean:img', 'img', 'webp', 'svg', 'sprite', 'sprite:social'));
 gulp.task('dev', gulp.series('clean:dev', gulp.parallel('scss', 'js', 'js:libs', 'js:fills', 'pug')));
 gulp.task('build', gulp.series(gulp.parallel('clean:img', 'clean:fonts', 'clean:dev'), gulp.parallel('optimg', 'fonts', 'scss', 'js', 'js:libs', 'js:fills', 'pug:min'), 'watch'));
 gulp.task('default', gulp.series('dev', 'watch'));

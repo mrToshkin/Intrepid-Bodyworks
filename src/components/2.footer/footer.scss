@@ -1,17 +1,252 @@
 .footer {
-  &__body {
-    background-color: $bgc-footer1;
-  }
-  &__nav {
-    z-index: 1;
-  }
-  &__copyrights {
-    background-color: $bgc-footer2;
-  }
   @media (max-width: $tablet) {
     padding-bottom: 55px;
   }
   @media (max-width: $mobile) {
     padding-bottom: 44px;
+  }
+  &__body {
+    padding-bottom: 40px;
+
+    background-color: $bgc-footer1;
+
+    @media (max-width: $tablet) {
+      padding-bottom: 30px;
+    }
+  }
+  &__line-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+
+    @media (max-width: 900px) {
+      padding-top: 24px;
+    }
+    
+    .footer__nav { 
+      z-index: 1;
+      width: auto;
+      min-height: unset;
+      margin-left: -20px;
+
+      @media (max-width: 900px) {
+        margin-left: 0;
+        width: 100%;
+      }
+
+      .menu__item {
+        @media (max-width: 900px) {
+          flex: 1 0 33.83333%;
+          &:nth-child(2n) {
+            transform: translateX(10px);
+          }
+        }
+        &-link { 
+          padding: 9px 20px;
+
+          @media (max-width: 900px) {
+            padding: 3px 0px;
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+
+    .footer__social {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      
+      margin-top: 6px;
+
+      @media (max-width: 900px) {
+        width: 100%;
+        margin-top: 20px;
+      }
+  
+      &-link {
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+
+        opacity: 1;
+        transition: 0.15s;
+
+        &:last-child { margin-right: 0; }
+        &:hover, &:focus {
+          opacity: 0.8;
+          transition: 0.15s;
+        }
+      }
+    }
+  }
+  &__line-info {
+    margin-top: 9px;
+
+    color: rgba($white, 0.5);
+
+    @media (max-width: 900px) {
+      margin-top: 20px;
+    }
+
+    p { 
+      margin-top: 20px;
+
+      @media (max-width: 900px) {
+        margin-top: 5px;
+      }
+    }
+
+    .footer__address {
+      grid-column: 1/6;
+
+      @media (max-width: 900px) {
+        grid-column: 1/7;
+      }
+      @media (max-width: $mobile) {
+        grid-column: 1/13;
+      }
+    }
+    .footer__contacts {
+      grid-column: 6/13;
+
+      @media (max-width: 900px) {
+        margin-top: 0px;
+        grid-column: 7/13;
+      }
+
+      @media (max-width: $mobile) {
+        margin-top: 15px;
+        grid-column: 1/13;
+      }
+      a {
+        color: rgba($white, 0.5);
+        &:hover, &:focus {
+          color: $white;
+        }
+      }
+    }
+  }
+  &__bottom {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    color: $white;
+
+    background-color: $bgc-footer2;
+
+    @media (max-width: 900px) {
+      padding-top: 28px;
+      padding-bottom: 45px;
+    }
+
+    .flex {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      @media (max-width: $mobile) {
+        display: block;
+      }
+    }
+    .footer__site {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: start;
+
+      @media (max-width: $mobile) {
+        display: block;
+      }
+
+      p { 
+        display: block;
+        margin-right: 40px;
+      }
+      span { 
+        display: block;
+
+        @media (max-width: $mobile) {
+          margin-top: 7px;
+        }
+      }
+    }
+    .footer__developer {
+      @media (max-width: $mobile) {
+        margin-top: 17px;
+      }
+    }
+  }
+}
+
+
+.company-rating__stars {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  transform: translateY(3px) ;
+  
+  .icon-star {
+    width: 20px;
+    padding: 0 2px;
+
+    fill: rgba($star-golden, 0.3);
+    transition: 0.15s;
+
+    &:last-child {
+      margin-left: 6px;
+    }
+    &--golden {
+      fill: $star-golden;
+      transition: 0.15s;
+    }
+  }
+  &:hover {
+    .icon-star {
+      fill: $star-grey;
+      transition: 0.15s;
+      &--golden {
+        fill: $star-grey;
+        transition: 0.15s;
+      }
+    }
+  }
+  
+  .star-5:hover {
+    fill: $star-golden;
+    ~.star-4, 
+    ~.star-3, 
+    ~.star-2, 
+    ~.star-1 {
+      fill: $star-golden;
+    }
+  }
+  .star-4:hover {
+    fill: $star-golden;
+    ~.star-3, 
+    ~.star-2, 
+    ~.star-1 {
+      fill: $star-golden;
+    }
+  }
+  .star-3:hover {
+    fill: $star-golden;
+    ~.star-2, 
+    ~.star-1 {
+      fill: $star-golden;
+    }
+  }
+  .star-2:hover {
+    fill: $star-golden; 
+    ~.star-1 {
+      fill: $star-golden;
+    }
+  }
+  .star-1:hover {
+    fill: $star-golden;
   }
 }

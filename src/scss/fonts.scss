@@ -139,4 +139,23 @@ p, h6 {
   line-height: 21px;
 }
 
+.footer {
+  @include font-size(16px);
+  line-height: 21px;
+
+  @media (max-width: $mobile) {
+    &__line-info {
+      @include font-size(13px);
+      line-height: 17px;
+    }
+    .menu {
+      @include font;
+    }
+    &__site {
+      @include font-size(15px);
+      line-height: 23px;
+    }
+  }
+}
+
 .text-transform-none { text-transform: none; }
