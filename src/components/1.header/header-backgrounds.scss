@@ -27,11 +27,133 @@
     }
     #path { overflow: hidden; }
   }
-  /* &::after {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    min-height: inherit;
-    vertical-align: middle;
-  } */
+}
+
+.article-page__header-background {
+  background: url(../img/general/headers/00_article-page--desktope.jpg) center center;
+  background: url(../img/general/headers/00_article-page--desktope.webp) center center;
+  background-size: cover;
+
+  @media 
+  (min-width: $desktope) and (min-resolution: $retina-dpi), 
+  (min-width: $desktope) and (min-resolution: $retina-dppx) {
+    background: url(../img/general/headers/00_article-page--desktope@2x.jpg) center center;
+    background: url(../img/general/headers/00_article-page--desktope@2x.webp) center center;
+  }
+  @media (max-width: $mobile) {
+    background: url(../img/general/headers/00_article-page--mobile.jpg) center center;
+    background: url(../img/general/headers/00_article-page--mobile.webp) center center; 
+  }
+}
+.who-we-are__header-background {
+  background: url(../img/general/headers/02_who-we-are--desktope.jpg) center center;
+  background: url(../img/general/headers/02_who-we-are--desktope.webp) center center;
+  background-size: cover;
+
+  @media 
+  (min-width: $desktope) and (min-resolution: $retina-dpi), 
+  (min-width: $desktope) and (min-resolution: $retina-dppx) {
+    background: url(../img/general/headers/02_who-we-are--desktope@2x.jpg) center center;
+    background: url(../img/general/headers/02_who-we-are--desktope@2x.webp) center center;
+  }
+  @media (max-width: $mobile) {
+    background: url(../img/general/headers/02_who-we-are--mobile.jpg) center center;
+    background: url(../img/general/headers/02_who-we-are--mobile.webp) center center; 
+  }
+}
+.price__header-background {
+  background: url(../img/general/headers/03_price--desktope.jpg) center center;
+  background: url(../img/general/headers/03_price--desktope.webp) center center;
+  background-size: cover;
+
+  @media 
+  (min-width: $desktope) and (min-resolution: $retina-dpi), 
+  (min-width: $desktope) and (min-resolution: $retina-dppx) {
+    background: url(../img/general/headers/03_price--desktope@2x.jpg) center center;
+    background: url(../img/general/headers/03_price--desktope@2x.webp) center center;
+  }
+  @media (max-width: $mobile) {
+    background: url(../img/general/headers/03_price--mobile.jpg) center center;
+    background: url(../img/general/headers/03_price--mobile.webp) center center; 
+  }
+}
+.what-we-do__header-background {
+  background: url(../img/general/headers/04_what-we-do--desktope.jpg) center center;
+  background: url(../img/general/headers/04_what-we-do--desktope.webp) center center;
+  background-size: cover;
+
+  @media 
+  (min-width: $desktope) and (min-resolution: $retina-dpi), 
+  (min-width: $desktope) and (min-resolution: $retina-dppx) {
+    background: url(../img/general/headers/04_what-we-do--desktope@2x.jpg) center center;
+    background: url(../img/general/headers/04_what-we-do--desktope@2x.webp) center center;
+  }
+  @media (max-width: $mobile) {
+    background: url(../img/general/headers/04_what-we-do--mobile.jpg) center center;
+    background: url(../img/general/headers/04_what-we-do--mobile.webp) center center; 
+  }
+}
+.craniosacral-massage__header-background {
+  background: url(../img/general/headers/05_craniosacral-massage--desktope.jpg) center center;
+  background: url(../img/general/headers/05_craniosacral-massage--desktope.webp) center center;
+  background-size: cover;
+
+  @media 
+  (min-width: $desktope) and (min-resolution: $retina-dpi), 
+  (min-width: $desktope) and (min-resolution: $retina-dppx) {
+    background: url(../img/general/headers/05_craniosacral-massage--desktope@2x.jpg) center center;
+    background: url(../img/general/headers/05_craniosacral-massage--desktope@2x.webp) center center;
+  }
+  @media (max-width: $mobile) {
+    background: url(../img/general/headers/05_craniosacral-massage--mobile.jpg) center center;
+    background: url(../img/general/headers/05_craniosacral-massage--mobile.webp) center center; 
+  }
+}
+.testimonials__header-background {
+  background: url(../img/general/headers/06_testimonials--desktope.jpg) center center;
+  background: url(../img/general/headers/06_testimonials--desktope.webp) center center;
+  background-size: cover;
+
+  @media 
+  (min-width: $desktope) and (min-resolution: $retina-dpi), 
+  (min-width: $desktope) and (min-resolution: $retina-dppx) {
+    background: url(../img/general/headers/06_testimonials--desktope@2x.jpg) center center;
+    background: url(../img/general/headers/06_testimonials--desktope@2x.webp) center center;
+  }
+  @media (max-width: $mobile) {
+    background: url(../img/general/headers/06_testimonials--mobile.jpg) center center;
+    background: url(../img/general/headers/06_testimonials--mobile.webp) center center; 
+  }
+}
+.faq__header-background {
+  background: url(../img/general/headers/08_faq--desktope.jpg) center center;
+  background: url(../img/general/headers/08_faq--desktope.webp) center center;
+  background-size: cover;
+
+  @media 
+  (min-width: $desktope) and (min-resolution: $retina-dpi), 
+  (min-width: $desktope) and (min-resolution: $retina-dppx) {
+    background: url(../img/general/headers/08_faq--desktope@2x.jpg) center center;
+    background: url(../img/general/headers/08_faq--desktope@2x.webp) center center;
+  }
+  @media (max-width: $mobile) {
+    background: url(../img/general/headers/08_faq--mobile.jpg) center center;
+    background: url(../img/general/headers/08_faq--mobile.webp) center center; 
+  }
+}
+.careers__header-background {
+  background: url(../img/general/headers/11_careers--desktope.jpg) center center;
+  background: url(../img/general/headers/11_careers--desktope.webp) center center;
+  background-size: cover;
+
+  @media 
+  (min-width: $desktope) and (min-resolution: $retina-dpi), 
+  (min-width: $desktope) and (min-resolution: $retina-dppx) {
+    background: url(../img/general/headers/11_careers--desktope@2x.jpg) center center;
+    background: url(../img/general/headers/11_careers--desktope@2x.webp) center center;
+  }
+  @media (max-width: $mobile) {
+    background: url(../img/general/headers/11_careers--mobile.jpg) center center;
+    background: url(../img/general/headers/11_careers--mobile.webp) center center; 
+  }
 }

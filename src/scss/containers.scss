@@ -46,6 +46,7 @@
 
   @media (max-width: $desktope) {
     max-width: calc((4/6)*100%);
+    padding: 0 50px;
   }
   @media (max-width: $tablet) {
     max-width: $tablet;

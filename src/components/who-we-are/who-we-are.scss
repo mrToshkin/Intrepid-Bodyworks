@@ -1,0 +1,13 @@
+.who-we-are {
+  &__wrapper--bg-lilac {
+    background: linear-gradient(0deg, #FAEDFF, #FAEDFF), url(../img/general/tx.png);
+    background: linear-gradient(0deg, #FAEDFF, #FAEDFF), url(../img/general/tx.webp);
+    background-blend-mode: screen, normal;
+  }
+  &__line {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    p { margin-top: 18px; }
+  }
+}

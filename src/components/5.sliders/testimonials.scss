@@ -47,10 +47,7 @@
   }
 
   &__button {
-    padding-top: 30px;
-    @media (max-width: $tablet) {
-      padding-top: 10px;
-    }
+    padding-top: 25px;
     &-link {
       position: relative;
       padding-right: 57px;
@@ -87,7 +84,7 @@ ul.slick-dots {
   }
   li button {
     position: absolute;
-    top: 40%;
+    top: calc(40% + 20px);
 
     width: 20px;
     height: 2px;
