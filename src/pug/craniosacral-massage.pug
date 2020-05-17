@@ -1,0 +1,32 @@
+extends layout/main
+
+block variables
+  - var title = "Intrepid Bodyworks - Craniosacral Massage"
+
+block header
+  header.header.craniosacral-massage__header-background
+    nav.header__nav
+      include ../components/3.nav/nav
+    .container--wide.grid
+      .header__body.gc-narrow
+        .breadcrumbs
+          ul.breadcrumbs__body
+            li.breadcrumbs__item
+              a(href="index.html").breadcrumbs__link Home
+            li.breadcrumbs__item
+              a(href="what-we-do.html").breadcrumbs__link What We Do
+            li.breadcrumbs__item Craniosacral Massage
+        .header__article
+          article
+            h1 Craniosacral Massage in Northglenn, CO
+            p.header__article-p Are you suffering from chronic headaches, ongoing aches and pains, or extreme fatigue? Craniosacral therapy may help provide the relief you're looking for.
+        .header__button
+          a(href="contact.html").button.button--i-want-to-relieve Request a Free Consultation
+
+block content
+  include ../components/craniosacral-massage/craniosacral-massage
+  include ../components/what-we-do/what-we-do
+  include ../components/5.sliders/testimonials
+  include ../components/contact-us/contact-us
+
+block script
