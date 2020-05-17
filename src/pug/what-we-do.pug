@@ -1,0 +1,31 @@
+extends layout/main
+
+block variables
+  - var title = "Intrepid Bodyworks - What We Do"
+
+block header
+  header.header.what-we-do__header-background
+    nav.header__nav
+      include ../components/3.nav/nav
+    .container--wide.grid
+      .header__body.gc-narrow
+        .breadcrumbs
+          ul.breadcrumbs__body
+            li.breadcrumbs__item
+              a(href="index.html").breadcrumbs__link Home
+            li.breadcrumbs__item What We Do
+        .header__article
+          article
+            h1 What We Do
+            p.header__article-p We excel at a wide variety of different modalities and reliefs. If you do not see your issues listed here that does not mean we am not cabable of helping you.
+        .header__button
+          a(href="contact.html").button.button--i-want-to-relieve Request a Free Consultation
+
+block content
+  include ../components/what-we-do/what-we-do
+  include ../components/what-we-do/what-we-do__article
+  include ../components/gift-certificates-block/gift-certificates-block
+  include ../components/5.sliders/testimonials
+  include ../components/contact-us/contact-us
+
+block script

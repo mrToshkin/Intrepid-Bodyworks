@@ -30,6 +30,10 @@
       flex: 0 1 25%;
       padding-right: 20px;
       text-align: right;
+
+      @media (max-width: $mobile) {
+        padding-right: 0;
+      }
     }
     &-caption {
       flex: 0 1 100%;
