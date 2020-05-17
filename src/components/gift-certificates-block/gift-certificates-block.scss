@@ -1,33 +1,36 @@
-.free-consultation {
+.gift-certificates-block {
   position: relative;
   &::before {
     content: '';
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     z-index: -2;
 
     width: 100%;
-    height: calc(100% - 120px);
+    height: calc(100% - 70px);
   
-    background: url(../img/general/tx_what-we-do.jpg);
-    background: url(../img/general/tx_what-we-do.webp);
-    background-repeat: repeat;
+    background: linear-gradient(0deg, #FAEDFF, #FAEDFF), url(../img/general/tx.png);
+    background: linear-gradient(0deg, #FAEDFF, #FAEDFF), url(../img/general/tx.webp);
+    background-blend-mode: screen, normal;
   }
   &__block {
     position: relative;
     z-index: 0;
 
     width: 100%;
+    margin-bottom: 140px;
     padding: 80px 100px;
 
     color: $white;
 
-    background: url(../img/svg/free-consultation.svg) no-repeat 100% 100% $color-main ;
+    background: url(../img/svg/gift-certificates.svg) no-repeat 90% 100% $color-main ;
+    background-size: auto 85%;
     
     @media (max-width: $mobile) {
+      margin-bottom: 70px;
       padding: 30px 20px;
-      background-size: auto 90%;
+      background-size: auto 50%;
     }
   }
   &__line-element {
