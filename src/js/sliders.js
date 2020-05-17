@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.testimonials__body').slick({
+  $('.testimonials__slider').slick({
     dots: true,
     mobileFirst: true,
     arrows: false,
