@@ -288,4 +288,16 @@ p {
   } 
 }
 
+.price {
+  &__item-caption {
+    @include font-size(16px);
+    line-height: 21px;
+
+    @media (max-width: $mobile) {
+      @include font-size(13px);
+      line-height: 17px;
+    }
+  }
+}
+
 .text-transform-none { text-transform: none; }
