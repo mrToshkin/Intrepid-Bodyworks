@@ -27,6 +27,7 @@
     flex-wrap: nowrap;
     width: 120px;
     height: 44px;
+    
     @media (max-width: $tablet) {
       width: 193px;
     }
@@ -50,8 +51,9 @@
       word-wrap: none;
       white-space: nowrap;
       color: $bgc-btn1;
+      transition: 0.15s;
       
-      &:hover, &:focus { color: $bgc-btn1-hover; }
+      &:hover, &:focus { color: $bgc-btn1-hover; transition: 0.15s; }
       @media (max-width: $tablet) {
         display: none;
       }
@@ -72,8 +74,8 @@
 }
 
 
-.nav__logo-link { &:focus { .icon-logo { opacity: 0.8; } } }
-.icon-logo { /* filter: invert(100%); */ &:hover { opacity: 0.8; } }
+.nav__logo-link { &:focus { .icon-logo { opacity: 0.8; transition: 0.15s; } } }
+.icon-logo { opacity: 1; transition: 0.15s; &:hover { opacity: 0.8; transition: 0.15s; } }
 
 .nojs {
   .nav {

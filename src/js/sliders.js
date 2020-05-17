@@ -28,4 +28,21 @@ $(document).ready(function() {
       }
     ]
   });
+
+  $('.article__slider-body').slick({
+    prevArrow: '.article__slider-nav--prev',
+    nextArrow: '.article__slider-nav--next',
+    dots: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          dots: true
+        }
+      }
+    ]
+  });
 });

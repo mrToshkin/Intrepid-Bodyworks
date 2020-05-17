@@ -24,12 +24,13 @@
   border-radius: 20px;
 
   background-color: $bgc-btn1;
+  transition: 0.15s;
   cursor: pointer;
-  &:hover, &:focus { background-color: $bgc-btn1-hover; }
+  &:hover, &:focus { background-color: $bgc-btn1-hover; transition: 0.15s; }
   &--contact-us { padding: 8px 24px; }
   &--i-want-to-relieve { padding: 8px 32px; }
-  &--learn-more { background-color: $bgc-btn2;
-    &:hover, &:focus { background-color: $bgc-btn2-hover; }
+  &--learn-more { background-color: $bgc-btn2; transition: 0.15s;
+    &:hover, &:focus { background-color: $bgc-btn2-hover; transition: 0.15s; }
   }
   @media (max-width: $tablet) {
     padding: 8px 20px;

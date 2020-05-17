@@ -1,0 +1,29 @@
+.article__slider-nav.article__slider-nav--prev
+  +icon-class-label('arrow', 'icon-arrow--left', 'slider button left', '28', '16', '0 0 39 26')
+.article__slider-nav.article__slider-nav--next
+  +icon-class-label('arrow', 'icon-arrow--right', 'slider button right', '28', '16', '0 0 39 26')
+.article__slider-body
+  .article__slider-item
+    picture
+      source(media="(max-width: "+mobile+"px)" srcset="img/content/"+file1+"@tablet.webp" type="image/webp" )
+      source(media="(max-width: "+mobile+"px)" srcset="img/content/"+file1+"@tablet.jpg")
+      source(media="(min-width: "+(tablet+1)+"px)" srcset="img/content/"+file1+"@desktope.webp" type="image/webp" )
+      img(class="article__slider-img" src="img/content/"+file1+"@desktope.jpg" alt="article slider image")
+    .article__picture-label 
+      p #{label1}
+  .article__slider-item
+    picture
+      source(media="(max-width: "+mobile+"px)" srcset="img/content/"+file2+"@tablet.webp" type="image/webp" )
+      source(media="(max-width: "+mobile+"px)" srcset="img/content/"+file2+"@tablet.jpg")
+      source(media="(min-width: "+(tablet+1)+"px)" srcset="img/content/"+file2+"@desktope.webp" type="image/webp" )
+      img(class="article__slider-img" src="img/content/"+file2+"@desktope.jpg" alt="article slider image")
+    .article__picture-label 
+      p #{label2}
+  .article__slider-item
+    picture
+      source(media="(max-width: "+mobile+"px)" srcset="img/content/"+file3+"@tablet.webp" type="image/webp" )
+      source(media="(max-width: "+mobile+"px)" srcset="img/content/"+file3+"@tablet.jpg")
+      source(media="(min-width: "+(tablet+1)+"px)" srcset="img/content/"+file3+"@desktope.webp" type="image/webp" )
+      img(class="article__slider-img" src="img/content/"+file3+"@desktope.jpg" alt="article slider image")
+    .article__picture-label 
+      p #{label3}

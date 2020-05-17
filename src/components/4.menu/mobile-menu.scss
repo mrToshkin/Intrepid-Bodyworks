@@ -10,7 +10,8 @@
     padding: 10px 10px;
     
     color: $white;
-    &:hover { opacity: 0.8; }
+    transition: 0.15s;
+    &:hover { color: rgba($white, 0.8); transition: 0.15s; }
   }
 }
 .mobile-menu {

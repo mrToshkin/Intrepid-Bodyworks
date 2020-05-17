@@ -27,12 +27,13 @@ footer.footer
     .container--wide.flex
       .footer__site
         p Intrepid Bodyworks © 2018
-        span.company-rating__text Company rating:
-          a(href="#").company-rating__stars
-            +icon-class('star', 'star-5', '16', '16')
-            +icon-class('star', 'star-4', '16', '16')
-            +icon-class('star', 'star-3 icon-star--golden', '16', '16')
-            +icon-class('star', 'star-2 icon-star--golden', '16', '16')
-            +icon-class('star', 'star-1 icon-star--golden', '16', '16')
+        fieldset.rating
+          legend.rating__caption Company rating:
+          .rating__group
+            input.rating__star(type="radio" name="rating" id="rating-1" value="1" aria-label="Company rating 1")
+            input.rating__star(type="radio" name="rating" id="rating-2" value="2" aria-label="Company rating 2")
+            input.rating__star(type="radio" name="rating" id="rating-3" value="3" aria-label="Company rating 3" checked)
+            input.rating__star(type="radio" name="rating" id="rating-4" value="4" aria-label="Company rating 4")
+            input.rating__star(type="radio" name="rating" id="rating-5" value="5" aria-label="Company rating 5")
       .footer__developer
         p Developed by Anton Strizhov

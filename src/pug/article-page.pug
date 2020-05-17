@@ -1,10 +1,10 @@
 extends layout/main
 
 block variables
-  - var title = "Intrepid Bodyworks - Who We Are"
+  - var title = "Intrepid Bodyworks - Article Page"
 
 block header
-  header.header.who-we-are__header-background
+  header.header.article-page__header-background
     nav.header__nav
       include ../components/3.nav/nav
     .container--wide.grid
@@ -13,15 +13,13 @@ block header
           ul.breadcrumbs__body
             li.breadcrumbs__item
               a(href="index.html").breadcrumbs__link Home
-            li.breadcrumbs__item Who We Are
+            li.breadcrumbs__item Bread crumbs
         .header__article
           article
-            h1 Welcome to Intrepid Bodyworks: Therapeutic Massage
+            h1 H1 What is vertical rhythm is it so important?
             p.header__article-p Intrepid Karma offers local massage deals in Northglenn and the surrounding cities such as Westminster and Thornton.
 
 block content
-  include ../components/who-we-are/who-we-are
-  include ../components/5.sliders/testimonials
-  include ../components/contact-us/contact-us
+  include ../components/article/article
 
 block script

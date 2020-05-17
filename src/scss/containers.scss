@@ -57,3 +57,18 @@
     padding: 0 20px;
   }
 }
+
+
+.grid { @include grid; }
+.gc-middle {
+  grid-column: 2/12; 
+  @media (max-width: $tablet) { 
+    grid-column: 1/13; 
+  }
+}
+.gc-narrow { 
+  grid-column: 3/11; 
+  @media (max-width: $tablet) { 
+    grid-column: 1/13; 
+  }
+}

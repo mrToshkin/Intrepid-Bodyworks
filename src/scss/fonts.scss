@@ -1,4 +1,5 @@
 body {
+  color: $black-text;
   font-family: $font;
   @include font-size(18px);
   line-height: 29px;
@@ -7,6 +8,7 @@ body {
     line-height: 22px;
   }
 }
+
 h1 {
   @include font-bold;
   @include font-size(56px);
@@ -36,7 +38,23 @@ h2 {
   }
 }
 
-h3 {
+.h2--h1 {
+  @include font-bold;
+  @include font-size(56px);
+  line-height: 73px;
+  @media (max-width: $desktope) {
+    @include font-size(42px);
+  }
+  @media (max-width: $tablet) {
+    @include font-size(34px);
+  }
+  @media (max-width: $mobile) {
+    @include font-size(26px);
+    line-height: 34px;
+  }
+}
+
+h2 {
   @include font-semibold;
   @include font-size(48px);
   line-height: 62px;
@@ -48,7 +66,15 @@ h3 {
     line-height: 31px;
   }
 }
-
+h3 {
+  @include font-semibold;
+  @include font-size(32px);
+  line-height: 42px;
+  @media (max-width: $mobile) {
+    @include font-size(20px);
+    line-height: 29px;
+  }
+}
 h4 {
   @include font-bold;
   @include font-size(24px);
@@ -62,8 +88,23 @@ h5 {
   @include font-semibold;
   @include font-size(20px);
   line-height: 29px;
+
+  @media (max-width: $mobile) {
+    @include font-size(15px);
+    line-height: 19px;
+  }
 }
-p, h6 { 
+h6 {
+  @include font-semibold;
+  @include font-size(18px);
+  line-height: 26px;
+
+  @media (max-width: $mobile) {
+    @include font-size(15px);
+    line-height: 19px;
+  }
+}
+p { 
   font-family: $font;
 }
 .header__article-p {
@@ -156,6 +197,95 @@ p, h6 {
       line-height: 23px;
     }
   }
+}
+
+.article {
+  &__bloger {
+    @include font-size(18px);
+    line-height: 29px;
+
+    @media (max-width: $mobile) {
+      @include font-size(13px);
+      line-height: 17px;
+    }
+    &-author {@include font-semibold; }
+  }
+  &__social {
+    @include font-size(16px);
+    line-height: 21px;
+
+    @media (max-width: $mobile) {
+      @include font-size(13px);
+      line-height: 17px;
+    }
+  }
+  &__quote {
+    &-text {
+      @include font-bolditalic;
+      @include font-size(30px);
+      line-height: 43px;
+
+      @media (max-width: $mobile) {
+        @include font-size(20px);
+        line-height: 29px;
+      }
+    }
+    &-author {
+      @include font-size(16px);
+      line-height: 21px;
+    }
+  }
+  &__contents {
+    @include font-semibold;
+    @include font-size(16px);
+    line-height: 23px;
+
+    @media (max-width: $mobile) {
+      @include font-size(13px);
+      line-height: 17px;
+    }
+  } 
+  &__picture-label p {
+    @include font-size(16px);
+    line-height: 21px;
+
+    @media (max-width: $mobile) {
+      @include font-size(13px);
+      line-height: 17px;
+    }
+  }
+  &__list {
+    @include font-size(18px);
+    line-height: 29px;
+
+    @media (max-width: $mobile) {
+      @include font-size(13px);
+      line-height: 17px;
+    }
+
+    &--checklist {
+      @include font-semibold;
+      @include font-size(18px);
+      line-height: 29px;
+  
+      @media (max-width: $mobile) {
+        @include font-size(13px);
+        line-height: 17px;
+      }
+    }
+  }
+  &__table {
+    thead, tbody {
+      @include font-size(16px);
+      line-height: 26px;
+  
+      @media (max-width: $mobile) {
+        @include font-size(13px);
+        line-height: 17px;
+      }
+    }
+    thead { @include font-semibold; }
+  } 
 }
 
 .text-transform-none { text-transform: none; }

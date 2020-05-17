@@ -21,7 +21,7 @@ body {
 
 ul[class], ol[class] {
   padding: 0;
-  list-style: none;
+  /* list-style: none; */
 }
 
 body, h1, h2, h3, h4, h5, h6, p, ul[class], ol[class],
@@ -86,7 +86,6 @@ button, input, summary, textarea {
 }
 a { outline-color: $bgc-btn1; }
 .hidden { display: none; }
-.grid { @include grid; }
 
 @import "fonts";
 @import "containers";
