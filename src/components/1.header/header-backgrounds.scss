@@ -28,6 +28,37 @@
     #path { overflow: hidden; }
   }
 }
+.gift-certificates__header-background {
+  background-color: $bgc-header;
+  position: absolute;
+  bottom: 0;
+  left: 65%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  z-index: 0;
+
+  display: block;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet) {
+    top: 50px;
+  }
+
+  svg {
+    stroke-dasharray: 2471px;
+    animation: dash 5s linear alternate;
+    
+    @keyframes dash {
+      0% { stroke-dashoffset: 2471px; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @media (max-width: $tablet) {
+      height: 400px;
+      transform: scale(0.75) translateY(20%);
+    }
+    #path { overflow: hidden; }
+  }
+}
 
 .article-page__header-background {
   background: url(../img/general/headers/00_article-page--desktope.jpg) center center;

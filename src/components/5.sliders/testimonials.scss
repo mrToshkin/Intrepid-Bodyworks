@@ -93,6 +93,7 @@ ul.slick-dots {
     background-color: $white;
     opacity: 0.3;
     transition: 0.15s;
+    &:before { display: none; }
   }
   li.slick-active button {
     opacity: 1;
