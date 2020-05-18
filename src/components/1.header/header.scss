@@ -19,6 +19,15 @@
       background-color: unset;
     }
   }
+  &--page-404 {
+    min-height: 800px;
+    @media (max-width: $tablet) {
+      min-height: 600px;
+    }
+    @media (max-width: $mobile) {
+      min-height: 450px;
+    }
+  }
 
   &__nav {
     z-index: 2;
@@ -87,6 +96,12 @@
       margin-top: 10px;
       h1 { color: $bgc-header;}
       .header__article-p {font-weight: normal; }
+    }
+    &--page-404 {
+      z-index: 1;
+      .h1--404, .p--404 {
+        text-align: center;
+      }
     }
   }
   // main page

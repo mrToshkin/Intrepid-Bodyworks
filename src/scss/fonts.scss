@@ -22,6 +22,20 @@ h1 {
   }
 }
 
+.h1--404 {
+  @include font-bold;
+  @include font-size(300px);
+  line-height: 360px;
+  @media (max-width: $tablet) {
+    @include font-size(220px);
+    line-height: 260px;
+  }
+  @media (max-width: $mobile) {
+    @include font-size(120px);
+    line-height: 140px;
+  }
+}
+
 h2 {
   @include font-bold;
   @include font-size(56px);
@@ -105,6 +119,11 @@ h6 {
   }
 }
 p { font-family: $font; }
+.p--404 {
+  @include font-semibold;
+  @include font-size(26px);
+  line-height: 37px;
+}
 .header {
   .breadcrumbs {
     @include font-size(16px);

@@ -59,6 +59,35 @@
     #path { overflow: hidden; }
   }
 }
+.page-404__header-background {
+  background-color: $bgc-header;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  z-index: 0;
+
+  display: block;
+  box-sizing: border-box;
+
+  svg {
+    stroke-dasharray: 2471px;
+    animation: dash 5s linear alternate;
+    
+    @keyframes dash {
+      0% { stroke-dashoffset: 2471px; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @media (max-width: $tablet) {
+      transform: scale(0.75) translateY(20%);
+    }
+    @media (max-width: $mobile) {
+      transform: scale(0.55) translateY(50%);
+    }
+    #path { overflow: hidden; }
+  }
+}
 
 .article-page__header-background {
   background: url(../img/general/headers/00_article-page--desktope.jpg) center center;
