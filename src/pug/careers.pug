@@ -1,0 +1,31 @@
+extends layout/main
+
+block variables
+  - var title = "Intrepid Bodyworks - Careers"
+  //- contact-us section
+  - var contactUsHeader = "Your Career"
+  - var contactUsText = "We want to be happy and healthy both inside and outside of work. Our benefits and perks vary by region, but they’re all based on the philosophy that taking care of our people is good for all of us."
+  - var contactUsButton = "Apply For Job"
+
+block header
+  header.header.careers__header-background
+    nav.header__nav
+      include ../components/3.nav/nav
+    .container--wide.grid
+      .header__body.gc-narrow
+        .breadcrumbs
+          ul.breadcrumbs__body
+            li.breadcrumbs__item
+              a(href="index.html").breadcrumbs__link Home
+            li.breadcrumbs__item Careers
+        article.header__article
+          h1 Massage Career Information
+          p.header__article-p Our expertise falls in line with therapeutic massage therapy, medical massage, sports massage therapy, chair massage for the sake of relaxation and a pain free life.
+        .header__button
+          a(href="contact-us.html").button.button--i-want-to-relieve Apply For Job
+
+block content
+  include ../components/careers/careers
+  include ../components/contact-us/contact-us
+
+block script
