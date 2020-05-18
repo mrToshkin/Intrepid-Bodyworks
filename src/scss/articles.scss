@@ -19,6 +19,12 @@
     }
 
   }
+  &__line {
+    width: 100%;
+    height: 1px;
+    margin-top: 30px;
+    background-color: $bgc-header;
+  }
   &__bloger {
     display: flex;
     flex-direction: row;
