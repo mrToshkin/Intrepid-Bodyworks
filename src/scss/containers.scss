@@ -60,6 +60,7 @@
 
 
 .grid { @include grid; }
+.gc-wide { grid-column: 1/13; }
 .gc-middle {
   grid-column: 2/12; 
   @media (max-width: $tablet) { 

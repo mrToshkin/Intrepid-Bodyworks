@@ -1,0 +1,195 @@
+extends layout/main
+
+block variables
+  - var title = "Intrepid Bodyworks - Contact"
+
+block header
+  header.header.header--contact-page
+    nav.header__nav
+      include ../components/3.nav/nav
+    #map
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.6190671884174!2d-104.98061758428783!3d39.8827698958633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c768c8a627a13%3A0xea7c262d53d755c4!2zMTAzMTMgV2FzaGluZ3RvbiBTdCwgVGhvcm50b24sIENPIDgwMjI5LCDQodCo0JA!5e0!3m2!1sru!2sru!4v1589829234290!5m2!1sru!2sru" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    .container--wide.grid
+      .header__body.header__body--contact-page
+        .breadcrumbs.breadcrumbs--contact-page
+          ul.breadcrumbs__body
+            li.breadcrumbs__item
+              a(href="index.html").breadcrumbs__link Home
+            li.breadcrumbs__item Contact
+        article.header__article.header__article--contact-page
+          h1 Contact
+          p.header__article-p We can address rehabilitation issues, structural problems, injuries, headaches and more. Contact Us Today and allow us to assess your current situation.
+          address.header__article-p Intrepid Bodyworks<br><span class="address" property="streetAddress" data-lat="39.882980" data-lng="-104.978386">10313 Washington St.10313 Washington</span> St.Thornton, CO 80229<br><a href="mailto:bodyworks@intrepidkarma.com">bodyworks@intrepidkarma.com</a>
+        a.header__phonenumber(href="tel:3034572040") 303-457-2040
+        .header__button--contact-page
+          a(href="contact-us.html").button.button--i-want-to-relieve Contact Us
+
+block content
+
+block script
+  //<script>
+    $(document).ready(function() {
+      var $addresses = $('.address'),
+          block = $('.header__article--contact-page');
+      if ($addresses.length) {
+        var $first = $addresses.first();
+        var gmap;
+        function initMap() {
+          gmap = new google.maps.Map(document.getElementById('map'), {
+            center: pointByAddr($first),
+            zoom: 16,
+            styles: [{
+              "featureType": "administrative",
+              "elementType": "all",
+              "stylers": [{
+                "saturation": "-100"
+              }]
+            }, {
+              "featureType": "administrative",
+              "elementType": "labels",
+              "stylers": [{
+                "visibility": "off"
+              }]
+            }, {
+              "featureType": "administrative.province",
+              "elementType": "all",
+              "stylers": [{
+                "visibility": "off"
+              }]
+            }, {
+              "featureType": "landscape",
+              "elementType": "all",
+              "stylers": [{
+                "saturation": -100
+              }, {
+                "lightness": 65
+              }, {
+                "visibility": "on"
+              }, {
+                "color": "#602d9a"
+              }]
+            }, {
+              "featureType": "landscape.man_made",
+              "elementType": "geometry",
+              "stylers": [{
+                "color": "#66359e"
+              }]
+            }, {
+              "featureType": "landscape.man_made",
+              "elementType": "labels",
+              "stylers": [{
+                "visibility": "off"
+              }]
+            }, {
+              "featureType": "landscape.natural",
+              "elementType": "labels",
+              "stylers": [{
+                "visibility": "off"
+              }]
+            }, {
+              "featureType": "poi",
+              "elementType": "all",
+              "stylers": [{
+                "saturation": -100
+              }, {
+                "lightness": "50"
+              }, {
+                "visibility": "off"
+              }]
+            }, {
+              "featureType": "poi",
+              "elementType": "labels",
+              "stylers": [{
+                "visibility": "off"
+              }]
+            }, {
+              "featureType": "road",
+              "elementType": "all",
+              "stylers": [{
+                "saturation": "-100"
+              }, {
+                "color": "#784eaa"
+              }]
+            }, {
+              "featureType": "road",
+              "elementType": "labels",
+              "stylers": [{
+                "visibility": "off"
+              }]
+            }, {
+              "featureType": "road.highway",
+              "elementType": "all",
+              "stylers": [{
+                "visibility": "simplified"
+              }]
+            }, {
+              "featureType": "road.highway",
+              "elementType": "labels",
+              "stylers": [{
+                "visibility": "off"
+              }]
+            }, {
+              "featureType": "road.arterial",
+              "elementType": "all",
+              "stylers": [{
+                "lightness": "30"
+              }, {
+                "color": "#784eaa"
+              }]
+            }, {
+              "featureType": "road.local",
+              "elementType": "all",
+              "stylers": [{
+                "lightness": "40"
+              }, {
+                "color": "#784eaa"
+              }]
+            }, {
+              "featureType": "transit",
+              "elementType": "all",
+              "stylers": [{
+                "saturation": -100
+              }, {
+                "visibility": "simplified"
+              }, {
+                "color": "#784eaa"
+              }]
+            }, {
+              "featureType": "water",
+              "elementType": "geometry",
+              "stylers": [{
+                "lightness": -25
+              }, {
+                "saturation": -97
+              }, {
+                "color": "#4f1790"
+              }]
+            }, {
+              "featureType": "water",
+              "elementType": "labels",
+              "stylers": [{
+                "lightness": -25
+              }, {
+                "saturation": -100
+              }, {
+                "visibility": "off"
+              }]
+            }]
+          }).on('ready', function() {
+            GMapMarker({
+              map: this,
+              position: this.center(),
+              icon: '../img/general/mapmark.png',
+              label: 'Intrepid Bodyworks'
+            });
+            markerCenter(this, block);
+            $first.addClass('active');
+          }).on('resize', function() {
+            gmap.center(this.markers[0]);
+            markerCenter(this, block);
+          });
+        }
+      }
+    });
+  //</script>
+  //<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADa9sIkGQm2vsmDu49bP35GOsudgur1ak&callback=initMap" async defer></script>  

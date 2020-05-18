@@ -13,7 +13,13 @@
   @media (max-width: $tablet) {
     min-height: 400px;
   }
-  
+
+  &--contact-page {
+    @media (max-width: $tablet) {
+      background-color: unset;
+    }
+  }
+
   &__nav {
     z-index: 2;
     margin-top: 32px;
@@ -35,11 +41,34 @@
         margin-bottom: 96px;
       }
     }
+    &--contact-page {
+      grid-column: 1/6;
+
+      padding-top: 50px;
+      padding-bottom: 60px;
+      padding-left: 60px;
+      padding-right: 60px;
+
+      color: $black-text;
+
+      background-color: $white;
+      transform: translateX(48px);
+
+      @media (max-width: $tablet) {
+        grid-column: 1/13;
+        padding: 0;
+        transform: unset;
+      }
+    }
   }
   &__article {
     margin-top: 20px;
     .header__article-p {
       margin-top: 20px;
+    }
+    a {
+      color: $color-main;
+      &:hover, &:focus { opacity: 0.75; }
     }
     &--main-page { 
       z-index: 1;
@@ -53,6 +82,11 @@
           margin-top: 19px;
         }
       }
+    }
+    &--contact-page {
+      margin-top: 10px;
+      h1 { color: $bgc-header;}
+      .header__article-p {font-weight: normal; }
     }
   }
   // main page
@@ -75,6 +109,16 @@
     z-index: 1;
     position: relative;
     @media (max-width: $tablet) { display: none; }
+  }
+  // contact
+  &__phonenumber {
+    margin-top: 20px;
+    color: $bgc-header;
+    &:hover, &:focus { opacity: 0.75; }
+  }
+  &__button--contact-page {
+    z-index: 1;
+    margin-top: 25px;
   }
 }
 
@@ -130,5 +174,29 @@
       color: $white;
       transition: 0.15s;
     }
+  }
+  &--contact-page {
+    .breadcrumbs__item { color: rgba($black-text, 0.5); }
+    .breadcrumbs__item +.breadcrumbs__item:before { color: rgba($black-text, 0.5); }
+    .breadcrumbs__link { color: rgba($black-text, 0.5);
+      &:hover, &:focus { color: $black-text; }
+    }
+  }
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+
+  filter: invert(90%) hue-rotate(175deg) brightness(135%);
+
+  @media (max-width: $tablet) {
+    position: relative;
+    height: 500px;
   }
 }

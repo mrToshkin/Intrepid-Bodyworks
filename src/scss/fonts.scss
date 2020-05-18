@@ -104,15 +104,29 @@ h6 {
     line-height: 19px;
   }
 }
-p { 
-  font-family: $font;
-}
-.header__article-p {
-  @include font-medium;
-  line-height: 29px;
-  @media (max-width: $tablet) {
-    @include font;
-    line-height: 22px;
+p { font-family: $font; }
+.header {
+  .breadcrumbs {
+    @include font-size(16px);
+    line-height: 21px;
+  
+    @media (max-width: $mobile) {
+      @include font-size(13px);
+      line-height: 17px;
+    }
+  }
+  &__article-p {
+    @include font-medium;
+    line-height: 29px;
+    @media (max-width: $tablet) {
+      @include font;
+      line-height: 22px;
+    }
+  }
+  &__phonenumber {
+    @include font-semibold;
+    @include font-size(26px);
+    line-height: 37px;
   }
 }
 .menu {
@@ -141,6 +155,7 @@ p {
     color: $white;
   }
 }
+
 .button {
   @include font-bold;
   word-wrap: none;
