@@ -1,0 +1,21 @@
+extends layout/main
+
+block variables
+  - var title = "Intrepid Bodyworks - Contact Us"
+
+block header
+  header.header.header--contact-us
+    nav.header__nav.header__nav--contact-us
+      .container--wide.nav__bg-wrapper
+        .nav.nav--contact-us
+          .nav__logo
+            a(href="index.html" tabindex="1").nav__logo-link
+              picture
+                source(class="icon-logo-changer" media="(min-width: 1025px)" srcset="img/svg/logo.svg")
+                img(class="icon-logo" src="img/svg/logo--mobile.svg" alt="logo")
+          address.nav__address 10313 Washington St.10313 Washington St.Thornton, CO 80229<br><a class="nav__phonenumber-link nav__phonenumber-link--contact-us" href="tel:3034572040">303-457-2040</a>
+
+block content
+  include ../components/contact-us-form/contact-us-form
+
+block script

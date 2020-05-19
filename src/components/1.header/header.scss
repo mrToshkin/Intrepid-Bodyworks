@@ -28,12 +28,32 @@
       min-height: 450px;
     }
   }
+  &--contact-us {
+    min-height: unset;
+    background-color: $color-main;
+  }
 
   &__nav {
     z-index: 2;
     margin-top: 32px;
     @media (max-width: $tablet) { 
       margin-top: 0;
+    }
+
+    &--contact-us {
+      &:after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100%;
+        margin-top: 35px;
+
+        background-color: rgba($white, 0.25);
+
+        @media (max-width: $tablet) {
+          display: none;
+        }
+      }
     }
   }
   &__body {
