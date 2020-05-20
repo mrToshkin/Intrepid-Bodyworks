@@ -49,9 +49,10 @@ html(lang="en")
     include ../../components/2.footer/footer
     .mobile-menu__overlay
     .mobile-menu
+      - var attr = {tabindex: '3'};
       include ../../components/4.menu/menu
     .mobile-bottom-blocks
-      a(href="3034572040").left-case 303-457-2040
-      a(href="contact.html").right-case Contact Us
+      a(href="tel:3034572040").left-case 303-457-2040
+      a(href="contact-us.html").right-case Contact Us
     block script
     noscript Your browser does not support JavaScript

@@ -158,9 +158,11 @@
       flex-direction: row;
       flex-wrap: nowrap;
       justify-content: start;
+      white-space: nowrap;
 
       @media (max-width: $mobile) {
         display: block;
+        white-space: normal;
       }
 
       p { 
@@ -193,7 +195,14 @@
   margin-inline-end: 0;
   border: none;
   
-  &__caption { padding: 0; }
+  &__caption {
+    padding: 0;
+    white-space: nowrap;
+
+    @media (max-width: $mobile) {
+      white-space: normal;
+    }
+  }
   
   &__group {
     position: absolute;

@@ -29,18 +29,18 @@ sass.compiler = require('node-sass');
 gulp.task('scss', () => {
   return gulp.src('./src/scss/styles.scss')
     .pipe(plumber())
-    .pipe(sourcemaps.init())
+    /* .pipe(sourcemaps.init()) */
     .pipe(sass())
-    /* .pipe(autoprefixer({
+    .pipe(autoprefixer({
       overrideBrowserslist:  ['last 3 versions'],
       cascade: false
     }))
-    .pipe(csscomb()) */
+    .pipe(csscomb())
     .pipe(gulp.dest('./build/css'))
     .pipe(browserSync.reload({ stream: true }))
     .pipe(replace('/*! normalize.css', '/* normalize.css'))
     .pipe(csso())
-    .pipe(sourcemaps.write())
+    /* .pipe(sourcemaps.write()) */
     .pipe(rename('styles.min.css'))
     .pipe(gulp.dest('./build/css'));
 });
@@ -86,7 +86,7 @@ gulp.task('js:libs', () => {
       presets: ['@babel/env']
     })) */
     .pipe(concat('libs.min.js'))
-    /* .pipe(uglify({toplevel: true})) */
+    .pipe(uglify({toplevel: true}))
     .pipe(gulp.dest('./build/js'))
     .pipe(browserSync.reload({stream: true}));
 });

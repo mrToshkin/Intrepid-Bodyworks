@@ -52,7 +52,7 @@
   &__menu {
     width: auto;
     margin-top: 0;
-    margin-left: 60px;  
+    padding-left: 60px;  
     
     @media (max-width: $tablet) {
       display: none;
@@ -85,7 +85,7 @@
     }
   }
   &__contact-us {
-    margin-left: 40px;
+    padding-left: 40px;
     @media (max-width: $tablet) {
       display: none;
     }

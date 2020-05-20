@@ -85,13 +85,13 @@
 //------------------------end--------------------------//
 
 //--------------color event current page---------------//
-.who-we-are__header-background { .menu__item-link-who-we-are { color: rgba($white, 0.6); } ~ .mobile-menu { .menu__item-link-who-we-are { color: rgba($white, 0.6); } } }
-.what-we-do__header-background { .menu__item-link-what-we-do { color: rgba($white, 0.6); } ~ .mobile-menu { .menu__item-link-what-we-do { color: rgba($white, 0.6); } } }
-.price__header-background { .menu__item-link-price { color: rgba($white, 0.6); } ~ .mobile-menu { .menu__item-link-price { color: rgba($white, 0.6); } } }
-.header__gift-certificates { .menu__item-link-gift-certificates { color: rgba($white, 0.6); } ~ .mobile-menu { .menu__item-link-gift-certificates { color: rgba($white, 0.6); } } }
-.faq__header-background { .menu__item-link-faq { color: rgba($white, 0.6); } ~ .mobile-menu { .menu__item-link-faq { color: rgba($white, 0.6); } } }
-.header--contact-page { .menu__item-link-contact { color: rgba($white, 0.6); } ~ .mobile-menu { .menu__item-link-contact { color: rgba($white, 0.6); } } }
-.careers__header-background { .menu__item-link-careers { color: rgba($white, 0.6); } ~ .mobile-menu { .menu__item-link-careers { color: rgba($white, 0.6); } } }
+.who-we-are__header-background { .menu__item-link-who-we-are { color: rgba($white, 0.6); } ~ .mobile-menu, ~ .footer { .menu__item-link-who-we-are { color: rgba($white, 0.6); } } }
+.what-we-do__header-background { .menu__item-link-what-we-do { color: rgba($white, 0.6); } ~ .mobile-menu, ~ .footer { .menu__item-link-what-we-do { color: rgba($white, 0.6); } } }
+.price__header-background { .menu__item-link-price { color: rgba($white, 0.6); } ~ .mobile-menu, ~ .footer { .menu__item-link-price { color: rgba($white, 0.6); } } }
+.header__gift-certificates { .menu__item-link-gift-certificates { color: rgba($white, 0.6); } ~ .mobile-menu, ~ .footer { .menu__item-link-gift-certificates { color: rgba($white, 0.6); } } }
+.faq__header-background { .menu__item-link-faq { color: rgba($white, 0.6); } ~ .mobile-menu, ~ .footer { .menu__item-link-faq { color: rgba($white, 0.6); } } }
+.header--contact-page { .menu__item-link-contact { color: rgba($white, 0.6); } ~ .mobile-menu, ~ .footer { .menu__item-link-contact { color: rgba($white, 0.6); } } }
+.careers__header-background { .menu__item-link-careers { color: rgba($white, 0.6); } ~ .mobile-menu, ~ .footer { .menu__item-link-careers { color: rgba($white, 0.6); } } }
 
 //-----------------------no-js-------------------------//
 .nojs {

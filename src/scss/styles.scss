@@ -84,7 +84,7 @@ body { position: relative; }
 button, input, summary, textarea {
   outline-color: $color-main;
 }
-a { outline-color: $bgc-btn1; }
+a, .burger { outline-color: $bgc-btn1; }
 .hidden { display: none; }
 
 @import "fonts";
