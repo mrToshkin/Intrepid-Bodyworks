@@ -1,18 +1,19 @@
+'use strict';
+
 $(document).ready(function() {
-  var $body = document.querySelector('body'),
+  let $body = document.querySelector('body'),
       burger = document.querySelector('.burger'),
       overlay = document.querySelector('.mobile-menu__overlay'),
       widthTablet = window.matchMedia('(max-width: 1024px)'); // media query list
 
   $('body').removeClass('nojs')
 
-  // чтобы присваивал класс только если мобильное разрешение
   function pageStarted() {
     if (widthTablet.matches) {
       $('body').addClass('menu--closed');
     }
   };
-  // присвоит класс при изменении мобильном размере, иначе удалит все классы
+  
   function checkWidth(e) {
     if (e.matches) {
       $('body').addClass('menu--closed');
@@ -23,7 +24,6 @@ $(document).ready(function() {
     }
   };
 
-  // следит за изменением размера окна
   widthTablet.addListener(checkWidth);
   pageStarted();
 
@@ -37,9 +37,11 @@ $(document).ready(function() {
     if ($body.classList.contains('menu--closed')) {
       $body.classList.remove('menu--closed');
       $body.classList.add('menu--opened');
+      burger.setAttribute('aria-expanded', true);
     } else {
       $body.classList.add('menu--closed');
       $body.classList.remove('menu--opened');
+      burger.setAttribute('aria-expanded', false);
     }
   });
 

@@ -1,5 +1,7 @@
+'use strict';
+
 $(document).ready(function() {
-  var wWide = window.matchMedia('(min-width: 1201px)'),
+  let wWide = window.matchMedia('(min-width: 1201px)'),
       wDesktope = window.matchMedia('(min-width: 1025px) and (max-width: 1200px)'),
       wTablet = window.matchMedia('(min-width: 769px) and (max-width: 1024px)'),
       wMobile = window.matchMedia('all and (max-width: 768px)');

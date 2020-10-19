@@ -1,6 +1,8 @@
+'use strict';
+
 $(document).ready(function() {
   $('.read-more__button').click(function() {
-    var elem = $('.read-more__button').text();
+    let elem = $('.read-more__button').text();
     if (elem == 'Read more') {
       $('.read-more__dots').css('display', 'none');
       $('.read-more__button').text('Read less');
@@ -12,7 +14,7 @@ $(document).ready(function() {
     }
   });
   
-  var widthMobile = window.matchMedia('(max-width: 768px)');
+  let widthMobile = window.matchMedia('(max-width: 768px)');
 
   function checkWidthReadMore(e) {
     if (e.matches) {
